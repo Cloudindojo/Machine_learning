@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <style type="text/css">
+    .bg{
+    background-image: url("static/home.jpg"); 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+        height: 650px;
+
+      }
+     
+   .Alogin-box{
+    
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    box-sizing: border-box;
+    margin-left: 200px;
+    margin-top: 100px;
+    
+    width: 300px;
+    height: 300px;
+}
+
+
+  </style>
+</head>
+<body class="container-fluid bg">
+  <div >
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">SmartFirewall</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('block')}}">RelatedSites</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('history')}}">History</a>
+      </li>
+    </ul>
+    <span class="navbar-text">
+      <a href="{{url_for('logout')}}">logout</a>
+    </span>
+  </div>
+</nav>
+<div>
+  
+</div><br><br>
+<div class="row justify-content-center h-100 container">
+  <div class="col-7"></div>
+  <div class="col-5">
+    <center>
+
+	<form class="Alogin-box" method="POST" action="/home">
+    <img src="static/imm.png" style="width: 100px; height: 100px"><br><br>
+		<input type="text" name="url" placeholder="enter url" required="text"><br><br>
+		<button>submit</button>
+	</form>
+	{{result}}</center>
+</div>
+</div>
+</div>
+</body>
+</html>

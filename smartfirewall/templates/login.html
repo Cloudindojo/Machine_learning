@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<style type="text/css">
+		
+    body {
+    font-family: "Lato", sans-serif;
+    background-image: url("static/img.jpg"); 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+        
+        
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+   
+    
+    
+</style>
+	
+</head>
+<body>
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Smart Firewall<br> Login Page</h2>
+            <p>Smart Firewall is part of the Network Protection settings for Desktops & Laptops in any policy you create for your organization. It monitors the communications between your computer and other computers on the Internet.</p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+            	
+               <form method="POST" action="/login">
+                  <div class="form-group">
+                     <label>User Name</label>
+                     <input type="text" class="form-control" placeholder="User Name" name="username" required="text">
+                  </div>
+                  <div class="form-group">
+                     <label>Password</label>
+                     <input type="password" class="form-control" placeholder="Password" name="password" required="password">
+                  </div>
+                  <button type="submit" class="btn btn-black">Login</button>
+                  
+               </form>
+            </div>
+         </div>
+      </div>
+</body>
+</html>
