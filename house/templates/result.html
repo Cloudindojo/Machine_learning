@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+  <style type="text/css">
+  	table{
+  		padding: 10px
+  	}
+  	tr{
+  		padding: 10px
+  	}
+  	td{
+  		padding-left: 25px;
+  		padding-right: 25px
+  	}
+  	body  {
+  background-image: url("static/res.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 700px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+.container1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.transbox table {
+  margin: 0%;
+  font-weight: bold;
+  color: #000000;
+}
+
+  </style>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding-top: 1px;padding-bottom: 1px">
+  <a class="navbar-brand" href="#"><img src="static/house.png" style="width: 70px; height: 50px">   House price </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/analysis">Analysis</a>
+      </li>
+      
+    </ul>
+    <span class="navbar-text">
+      <a href="{{url_for('index')}}">logout</a>
+    </span>
+  </div>
+</nav>
+	<div class="container1">
+		<div class="transbox">
+		<table class="table-hover">
+			<thead class="thead-dark">
+				<tr class="thead-dark"><center>
+					<h2 style="background-color: #00ff99">predict house price</h2></center>
+				</tr>
+			</thead>
+			<tr>
+				<td><label>BedRooms</label></td>
+				<td>:   {{BedRooms}}</td>
+				<td><label>BathRooms</label></td>
+				<td>:   {{BathRooms}}</td>
+				<td><label>Square feet Living</label></td>
+				<td>:   {{Squarefeet}}</td>
+			</tr>
+			<tr>
+				<td><label>Square Lot area</label></td>
+				<td>: {{SquareLot}}</td>
+				<td><label>Floors</label></td>
+				<td>: {{Floors}}</td>
+				<td><label>WaterFronts</label></td>
+				<td>: {{WaterFronts}}</td>
+			</tr>
+			<tr>
+				<td><label>Swimming Pool</label></td>
+				<td>: {{SwimmingPool}}</td>
+				<td><label>Grade</label></td>
+				<td>: {{Grade}}</td>
+				<td><label>Square Feet Above</label></td>
+				<td>: {{SquareFeetAbove}}</td>
+			</tr>
+			<tr>
+				<td><label>Square Feet Basement</label></td>
+				<td>:   {{SquareFeetBasement}}</td>
+			</tr>
+			<tr class="table-success w-100">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Predicted House Price</td>
+				<td>{{ss}}</td>
+			
+			</tr>
+			
+		</table>
+		
+	</div>
+	
+</div>
+</body>
+</html>
