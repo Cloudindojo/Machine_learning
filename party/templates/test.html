@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<title></title>
+<style type="text/css">
+.stars-outer {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-outer::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ccc;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f8ce0b;
+}
+
+</style>
+</head>
+<body>
+ <div>
+          <div class="star">
+          <div class="stars-outer ">
+            <div class="stars-inner"></div>
+          </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+ // Initial Ratings
+const ratings = {star: 0}
+
+// Total Stars
+const starsTotal = 5;
+
+// Run getRatings when DOM loads
+document.addEventListener('DOMContentLoaded', getRatings);
+
+
+    
+// Init product
+let product;  
+
+// Rating control change
+    
+
+// Get ratings
+function getRatings() {
+      for (let rating in ratings) {
+        // Get percentage
+        
+        const any = 65
+
+        //const any = document.getElementById('input1')
+        // Round to nearest 10
+        const starPercentageRounded = any +'%';
+
+        // Set width of stars-inner to percentage
+        document.querySelector(`.${rating} .stars-inner`).style.width = starPercentageRounded;
+
+        // Add number rating
+        document.querySelector(`.${rating} .number-rating`).innerHTML = ratings[rating];
+      }
+    }
+
+    </script>
+</body>
+</html>
