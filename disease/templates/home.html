@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+<style type="text/css">
+body  {
+
+  background-image: url("static/bb.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px;
+  background-size: 100% 230%;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  
+}
+label{
+color: white;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 15px 15px;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div>
+		<nav class="navbar navbar-expand-lg navbar-light" style="padding-top: 0px; padding-bottom: 0px; background-color: #993399">
+  <a class="navbar-brand" href="#" style="margin: 0px; padding: 0px"><img src="static/logo.png" style="width: 70px; height: 50px; margin: 0px; padding: 0px"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+    </ul>
+    <span class="navbar-text">
+     <a href="/logout">Logout</a>
+    </span>
+  </div>
+</nav>
+	</div>
+<div>
+<center>
+	
+	<div class="row" style="margin-top: 0px;padding-top: 0px">
+		<div class="col-6" style="margin-top: 0px;padding-top: 0px">
+			<div class="card" style="margin-top: 0px;padding-top: 0px">
+			<img src="static/s.gif" style="height: 750px"></div>
+		</div>
+		<div class="col-6">
+			<form action="/home" method="POST" style="margin-top: 200px">
+
+ 	<table >
+		<tr ><h2 style="color: white">Enter Symptom</h2></tr>
+		<tr>
+			<td><label>Name of the Patient</label></td>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td><label>Symptom1</label></td>
+			<td><select name="Symptom1">
+				<option>None</option>
+				{% for i in ll %}
+				<option>{{i}}</option>
+				{% endfor %}
+				
+			</select></td>
+		</tr>
+		<tr>
+			<td><label>Symptom2</label></td>
+			<td><select name="Symptom2">
+				<option>None</option>
+				{% for i in ll %}
+				<option>{{i}}</option>
+				{% endfor %}
+				
+			</select></td>
+		</tr>
+		<tr>
+			<td><label>Symptom3</label></td>
+			<td><select name="Symptom3">
+				<option>None</option>
+				{% for i in ll %}
+				<option>{{i}}</option>
+				{% endfor %}
+				
+			</select></td>
+		</tr>
+		<tr>
+			<td><label>Symptom4</label></td>
+			<td><select name="Symptom4">
+				<option>None</option>
+				{% for i in ll %}
+				<option>{{i}}</option>
+				{% endfor %}
+				
+			</select></td>
+		</tr>
+		<tr>
+			<td><label>Symptom5</label></td>
+			<td><select name="Symptom5">
+				<option>None</option>
+				{% for i in ll %}
+				<option>{{i}}</option>
+				{% endfor %}
+				
+			</select></td>
+		</tr>
+
+	</table>
+	<button>submit</button>
+</form>
+		</div>
+	</div>
+	</center></div>
+</div>
+</body>
+</html>
