@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding-top: 1px;padding-bottom: 1px">
+  <a class="navbar-brand" href="#"><img src="static/12.png" style="width: 70px; height: 50px">   Movie sucess </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/dataset"> Dataset </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/graphs"> DataAnalysis </a>
+      </li>
+      
+    </ul>
+    <span class="navbar-text">
+      <a href="{{url_for('index')}}">logout</a>
+    </span>
+  </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		tr{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+	</style>
+</head>
+<body>
+	{% extends 'layout.html' %}
+{% block content %}
+<div class="row">
+  <div class="col-sm-5" style="padding-top: 100px"><center>
+    <form action="{{url_for('price')}}" method="POST">
+      <table>
+        <tr>
+          <td>
+            <label>Movie Duration</label>
+          </td>
+          <td>
+           : <input type="number" name="Runtime (Minutes)" placeholder="enter time in minutues" required="true">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Release Year</label>
+          </td>
+          <td>
+           : <input type="number" name="Year" placeholder="enter year" required="true">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Movie Type</label>
+          </td>
+          <td>
+           : <input type="number" name="Genre" placeholder="enter name in numericals" required="true">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>MetaScore</label>
+          </td>
+          <td>
+            : <input type="number" name="Metascore" placeholder="enter score" required="true">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Likes</label>
+          </td>
+          <td>
+           : <input type="number" name="Votes" placeholder="enter number of votes" required="true">
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button>submit</button></td>
+        </tr>
+      </table>
+           
+      
+    </form></center>
+  </div>
+<div class="col-sm-7">
+	<div class="card">
+  <img src="\static\samplegraph.png" style="height:400px"> 
+  </div>
+  <div>
+     
+  
+</div>
+</div>
+{% endblock %}
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
